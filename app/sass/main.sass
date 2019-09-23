@@ -65,6 +65,7 @@ h3
 	font-weight: 600
 	font-size: 1.5rem
 	line-height: 2.2rem
+	margin: 2rem 0
 
 h4
 	font-weight: 600
@@ -222,32 +223,33 @@ h5
 	
 	
 	// страница Services_of_our_clinic, блок "Услуги нашей клиники"
-.Services_of_our_clinic
+.service-items
 	.item
 		background-color: $white
 		padding: 1.5rem 2rem
 		border-radius: 5px
 		box-shadow: 0rem 0rem 0.4rem rgba(0, 0, 0, 0.1)
-		margin-bottom: 2rem
+		margin-bottom: 1rem
 		width: calc(33% - 0.75rem)
-	// &:first-child
-	// 	margin-left: 0
-	// &:last-child
-	// 	margin-right: 0
-	h3
-		margin: 2rem 0
-	.graph
-		padding-top: 1rem
-		font-weight: 400
-		font-size: 1rem
-		line-height: 1.4rem
-	p
-		margin: 0
-	.message
-		padding-left: 1rem
-		font-weight: 600
-		font-size: 1.1rem
-		line-height: 1.5rem
+		margin-right: 1rem
+		&:nth-child(3n)
+			margin-right: 0
+		.graph
+			padding-top: 1rem
+			font-weight: 400
+			font-size: 1rem
+			line-height: 1.4rem
+		p
+			margin: 0
+		.message
+			padding-left: 1rem
+			font-weight: 600
+			font-size: 1.1rem
+			line-height: 1.5rem
+			width: calc(100% - 3.1rem)
+
+
+		
 				
 	
 		
