@@ -9,196 +9,249 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/styles.min.css">
-	<script src="js/_slider.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/js/_script.js"></script>
 
 </head>
 
 <body>
-	<!-- блок "наши услуги" -->
-	<section class="services pdn-section">
-		<div class="centerWrap item_h2">
-			<h2>Наши услуги</h2>
-		</div>
-		<div class="centerWrap flex">
-			<div class="item">
-				<div class="flex flex-align_center">
-					<img class="gym_img" src="/img/services/Group.svg" alt="">
-					<span class="message">Оздоровительная гимнастика</span>
+	<div class="main">
+		<div class="main-content">
+			<div class="menu" id="menu">
+				<div class="mrg-side flex flex-just_space flex-align_center">
+					<div class="flex">
+						<a href="/" class="logo flex flex-align_center flex-just_center"><img src="img\logo.png" alt="Логотип"></a>
+						<ul class="flex flex-just_end flex-align_center">
+							<li><a href="/" class="js-anhors">Главная</a></li>
+							<li><a href="/" class="js-anhors">Услуги</a></li>
+							<li><a href="/" class="js-anhors">Курсы и расписание</a></li>
+							<li><a href="/" class="js-anhors">Cтоимость</a></li>
+							<li><a href="/contact.html">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="flex flex-align_center">
+						<div class="menu-contact flex flex-direction_column">
+							<span>8 (800) 000-88-11</span>
+							<p>с 9:00 до 20:00</p>
+						</div>
+						<div class="btn-wrap">
+							<a class="btn btn-header" onclick="openPopup()"><span>Заказать звонок</span></a>
+						</div>
+					</div>
 				</div>
-				<div class="graph">
-					<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
-				</div>
-				<a href="" class="">
-					<button class="btn">Подробнее</button>
-				</a>
 			</div>
-			<div class="item">
-				<div class="flex flex-align_center">
-					<img class="gym_img" src="/img/services/Group.svg" alt="">
-					<span class="message">Оздоровительная гимнастика</span>
+			<div class="menu-mob" id="menu-mob">
+				<div class="flex flex-just_space" style="position: relative">
+					<div class="menu-btn flex flex-align_center" onclick="theToggle()">
+						<a id="toggle"><span></span></a>
+					</div>
+					<div class="menu-logo flex flex-align_center flex-just_center">
+						<!-- <a href="/" class="logo"><img src="img\logo.png" alt="Логотип"></a> -->
+						<a href="/" class="logo">Клиника «Soft»</a>
+					</div>
+					<div class="menu-phone flex flex-align_center" onclick="openPopup()">
+						<a><img src="img/phone-call.svg" alt=""></a>
+					</div>
 				</div>
-				<div class="graph">
-					<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
+				<div id="menu-link">
+					<ul class="flex flex-just_center flex-align_center">
+						<li><a href="/#what-is-work" class="js-anhors">Как это работает</a></li>
+						<li><a href="/#composition" class="js-anhors">Из чего состоит</a></li>
+						<li><a href="/#experience" class="js-anhors">Опыт применения</a></li>
+						<li><a href="/#benefits" class="js-anhors">Преимущества</a></li>
+						<li><a href="/contact.html">Контакты</a></li>
+					</ul>
 				</div>
-				<a href="" class="">
-					<button class="btn">Подробнее</button>
-				</a>
 			</div>
-			<div class="item">
-				<div class="flex flex-align_center">
-					<img class="gym_img" src="/img/services/Group.svg" alt="">
-					<span class="message">Оздоровительная гимнастика</span>
+			<!-- НАЧАЛО КОНТЕНТА НА СТРАНИЦЕ -->
+			<!-- блок "наши услуги" -->
+			<section class="services pdn-section">
+				<div class="centerWrap item_h2">
+					<h2>Наши услуги</h2>
 				</div>
-				<div class="graph">
-					<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
+				<div class="centerWrap flex">
+					<div class="item">
+						<div class="flex flex-align_center">
+							<img class="gym_img" src="/img/services/Group.svg" alt="">
+							<span class="message">Оздоровительная гимнастика</span>
+						</div>
+						<div class="graph">
+							<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
+						</div>
+						<a href="" class="">
+							<button class="btn">Подробнее</button>
+						</a>
+					</div>
+					<div class="item">
+						<div class="flex flex-align_center">
+							<img class="gym_img" src="/img/services/Group.svg" alt="">
+							<span class="message">Оздоровительная гимнастика</span>
+						</div>
+						<div class="graph">
+							<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
+						</div>
+						<a href="" class="">
+							<button class="btn">Подробнее</button>
+						</a>
+					</div>
+					<div class="item">
+						<div class="flex flex-align_center">
+							<img class="gym_img" src="/img/services/Group.svg" alt="">
+							<span class="message">Оздоровительная гимнастика</span>
+						</div>
+						<div class="graph">
+							<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
+						</div>
+						<a href="" class="">
+							<button class="btn">Подробнее</button>
+						</a>
+					</div>
+					<div class="item">
+						<div class="flex flex-align_center">
+							<img class="gym_img" src="/img/services/Group.svg" alt="">
+							<span class="message">Оздоровительная гимнастика</span>
+						</div>
+						<div class="graph">
+								<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
+						</div>
+						<a href="" class="">
+							<button class="btn">Подробнее</button>
+						</a>
+					</div>	
 				</div>
-				<a href="" class="">
-					<button class="btn">Подробнее</button>
-				</a>
-			</div>
-			<div class="item">
-				<div class="flex flex-align_center">
-					<img class="gym_img" src="/img/services/Group.svg" alt="">
-					<span class="message">Оздоровительная гимнастика</span>
-				</div>
-				<div class="graph">
-						<p>Изометрическая гимнастика, йогатерапия, танцетерапия. Изометрическая гимнастика</p>
-				</div>
-				<a href="" class="">
-					<button class="btn">Подробнее</button>
-				</a>
-			</div>	
-		</div>
-	</section>
+			</section>
 
-	<!-- блок "основатель центра" -->
-	<section class="founder_center mrg-section">
-		<div class="flex centerWrap">
-			<div class="block_one">
-				<h2>Основатель центра</h2>
-				<div class="name_founder">Якушева Альфия Нажметдиновна</div>
-				<div class="skills">
-					<div>
-						<img src="img/founder_center/hospital.png" alt="">
-						Кандидат биологических наук по восстановительной 
-						медицине.
-					</div>
-						<div>
-							<img src="img/founder_center/goal.png" alt="">
-							Стаж лечебной работы более 20 лет. 
+			<!-- блок "основатель центра" -->
+			<section class="founder_center mrg-section">
+				<div class="flex centerWrap">
+					<div class="block_one">
+						<h2>Основатель центра</h2>
+						<div class="name_founder">Якушева Альфия Нажметдиновна</div>
+						<div class="skills">
+							<div>
+								<img src="img/founder_center/hospital.png" alt="">
+								Кандидат биологических наук по восстановительной 
+								медицине.
+							</div>
+								<div>
+									<img src="img/founder_center/goal.png" alt="">
+									Стаж лечебной работы более 20 лет. 
+								</div>
+								<div>
+									<img src="img/founder_center/book.png" alt="">
+									Стаж преподавательской работы более 15 лет.
+							</div>
 						</div>
-						<div>
-							<img src="img/founder_center/book.png" alt="">
-							Стаж преподавательской работы более 15 лет.
+						<span>Направление научных интересов:</span>
+						<ul>
+							<li>Йогатерапия</li>
+							<li>Лечебный массаж</li>
+							<li>Мануальные остеопатические техники</li>
+							<li>Векторно-тканевая теория</li>
+							<li>Мягкие техники в терапии</li>
+							<li>Теории «Мышечных цепей»</li>
+						</ul>
+					</div>
+					<div class="block_two">
+						<!-- <img src="/img/founder_center/Vector.svg" alt=""> -->
+						<img src="/img/founder_center/Photo.png" alt="">
 					</div>
 				</div>
-				<span>Направление научных интересов:</span>
-				<ul>
-					<li>Йогатерапия</li>
-					<li>Лечебный массаж</li>
-					<li>Мануальные остеопатические техники</li>
-					<li>Векторно-тканевая теория</li>
-					<li>Мягкие техники в терапии</li>
-					<li>Теории «Мышечных цепей»</li>
-				</ul>
-			</div>
-			<div class="block_two">
-				<!-- <img src="/img/founder_center/Vector.svg" alt=""> -->
-				<img src="/img/founder_center/Photo.png" alt="">
-			</div>
-		</div>
-	</section>
+			</section>
 
-	<!-- блок "почему мы" -->
-	<section class="why_are_we pdn-section">
-		<div class="centerWrap">
-			<h2>Почему мы?</h2>
-		</div>
-		<div class="centerWrap">
-			<div class="items flex">
-				<div class="item flex flex-just_center text-centr flex-direction_column">
-					<div>
-						<img src="img/why_are_we/Insurance.svg" alt="">
+			<!-- блок "почему мы" -->
+			<section class="why_are_we pdn-section">
+				<div class="centerWrap">
+					<h2>Почему мы?</h2>
+				</div>
+				<div class="centerWrap">
+					<div class="items flex">
+						<div class="item flex flex-just_center text-centr flex-direction_column">
+							<div>
+								<img src="img/why_are_we/Insurance.svg" alt="">
+							</div>
+								<div class="tbc flex flex-just_center flex-align_center">
+									<span>Индивидуальный подход</span>
+								</div>
+								<div class="cont">
+									<p>Мы подберем программу лечения,которая подходит именно вам</p>
+								</div>
+						</div>
+						<div class="item flex flex-just_center text-centr flex-direction_column">
+								<div>
+									<img src="img/why_are_we/team.svg" alt="">
+								</div>
+									<div class="tbc flex flex-just_center flex-align_center">
+										<span>Годы практики</span>
+									</div>
+									<div class="cont">
+										<p>Более 20 лет практики у специалистов нашего центра</p>
+									</div>
+						</div>
+						<div class="item flex flex-just_center text-centr flex-direction_column">
+								<div>
+									<img src="img/why_are_we/knowledge.svg" alt="">
+								</div>
+									<div class="tbc flex flex-just_center flex-align_center">
+										<span>Авторские методики</span>
+									</div>
+									<div class="cont">
+										<p>Совершенно свежий и эффективный подход к старым проблемам</p>
+									</div>
+						</div>
+						<div class="item flex flex-just_center text-centr flex-direction_column">
+								<div>
+									<img src="img/why_are_we/Group2.svg" alt="">
+								</div>
+									<div class="tbc flex flex-just_center flex-align_center">
+										<span>Приятные цены</span>
+									</div>
+									<div class="cont">
+										<p>Не нужно тратить много чтобы быть здоровым, с нами это возможно!</p>
+									</div>
+						</div>
+						</div>
 					</div>
-						<div class="tbc flex flex-just_center flex-align_center">
-							<span>Индивидуальный подход</span>
-						</div>
-						<div class="cont">
-							<p>Мы подберем программу лечения,которая подходит именно вам</p>
-						</div>
 				</div>
-				<div class="item flex flex-just_center text-centr flex-direction_column">
-						<div>
-							<img src="img/why_are_we/team.svg" alt="">
-						</div>
-							<div class="tbc flex flex-just_center flex-align_center">
-								<span>Годы практики</span>
-							</div>
-							<div class="cont">
-								<p>Более 20 лет практики у специалистов нашего центра</p>
-							</div>
-				</div>
-				<div class="item flex flex-just_center text-centr flex-direction_column">
-						<div>
-							<img src="img/why_are_we/knowledge.svg" alt="">
-						</div>
-							<div class="tbc flex flex-just_center flex-align_center">
-								<span>Авторские методики</span>
-							</div>
-							<div class="cont">
-								<p>Совершенно свежий и эффективный подход к старым проблемам</p>
-							</div>
-				</div>
-				<div class="item flex flex-just_center text-centr flex-direction_column">
-						<div>
-							<img src="img/why_are_we/Group2.svg" alt="">
-						</div>
-							<div class="tbc flex flex-just_center flex-align_center">
-								<span>Приятные цены</span>
-							</div>
-							<div class="cont">
-								<p>Не нужно тратить много чтобы быть здоровым, с нами это возможно!</p>
-							</div>
-				</div>
-				</div>
-			</div>
-		</div>
-	</section>
+			</section>
 
 
-	<!-- Блок "о нашем центре" -->
-	<section class="about_our_center mrg-section">
-		<div class="flex centerWrap flex-align_center">
-			<div class="block_one">
-				<img src="img/about our center/ginekolog.png" alt="">
-			</div>
-			<div class="block_two">
-				<h2>О нашем центре</h2>
-				<div class="graph">
-					<p>В центре современных оздоровительно-физкультурных технологий «SOFT» находится <b>единственный в регионе</b> аппарат для «сухого аквамассажа».</p>
-				<p>Несколько видов занятий по йогатерапии.</p>
-				<p>Авторские методы лечения массажем и первоклассные специалисты.</p>
+			<!-- Блок "о нашем центре" -->
+			<section class="about_our_center mrg-section">
+				<div class="flex centerWrap flex-align_center">
+					<div class="block_one">
+						<img src="img/about our center/ginekolog.png" alt="">
+					</div>
+					<div class="block_two">
+						<h2>О нашем центре</h2>
+						<div class="graph">
+							<p>В центре современных оздоровительно-физкультурных технологий «SOFT» находится <b>единственный в регионе</b> аппарат для «сухого аквамассажа».</p>
+						<p>Несколько видов занятий по йогатерапии.</p>
+						<p>Авторские методы лечения массажем и первоклассные специалисты.</p>
+						</div>
+						<div class="flex">
+							<div class="flex flex-direction_column">
+								<span class="score">3</span>
+								<span class="sentence">Года на <br> рынке</span>
+							</div>
+							<div class="indent flex flex-direction_column">
+								<span class="score">2300</span>
+								<span class="sentence">Довольных <br> клиентов</span>
+							</div>
+							<div class="flex flex-direction_column">
+								<span class="score">17</span>
+								<span class="sentence">Видов <br> услуг</span>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="flex">
-					<div class="flex flex-direction_column">
-						<span class="score">3</span>
-						<span class="sentence">Года на <br> рынке</span>
-					</div>
-					<div class="indent flex flex-direction_column">
-						<span class="score">2300</span>
-						<span class="sentence">Довольных <br> клиентов</span>
-					</div>
-					<div class="flex flex-direction_column">
-						<span class="score">17</span>
-						<span class="sentence">Видов <br> услуг</span>
-					</div>
-				</div>
-			</div>
+			</section>
 		</div>
-	</section>
+	</div>
 
-	<script src="js/scripts.min.js"></script>
+	
 </body>
 </html>

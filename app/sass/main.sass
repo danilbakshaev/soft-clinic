@@ -2,6 +2,14 @@
 @import fonts
 @import libs
 
+// Точки для адаптации
+// @media screen and (max-width: 540px)
+// @media screen and (max-width: 720px)
+// @media screen and (max-width: 960px)
+// @media screen and (max-width: 1140px)
+// @media screen and (max-width: 1560px)
+
+
 $red: red
 $gray: gray	
 $white: #FFFFFF
@@ -12,11 +20,21 @@ $bcgcolor: #FBFBFB
 $black: #212223
 $slightlygray: #FAFAFA
 $separator: #EFEFEF
+$blue-text: #0A4250
 
 html, body
-  font-size: 16px
-//   background-color: #052580
-  font-family: 'Open Sans', sans-serif
+	font-size: 16px
+	font-family: 'Open Sans', sans-serif
+	color: $black
+	@media screen and (max-width: 1560px)
+		font-size: 15px
+	@media screen and (max-width: 960px)
+		font-size: 14px
+	@media screen and (max-width: 720px)
+		font-size: 12px
+		
+.main-content
+	overflow: hidden
 
 .flex
   display: flex
@@ -42,15 +60,30 @@ html, body
   justify-content: flex-end
 
 .centerWrap
-	max-width: 70rem
+	max-width: 82rem
 	margin: 0px auto
 	position: relative
+	width: 100%
+	@media screen and (max-width: 1560px)
+		max-width: 70rem
+	@media screen and (max-width: 1140px)
+		max-width: 64rem 
+	@media screen and (max-width: 960px)
+		max-width: 48rem !important
+	@media screen and (max-width: 720px)
+		max-width: calc(100% - 48px) !important
+		margin: 0px 24px
 
 .mrg-section
 	margin: 4rem 0
 
 .pdn-section
 	padding: 4rem 0
+
+ul, ol 
+	padding: 0
+	margin: 0
+	list-style: none
 
 h1
 	font-weight: 600
@@ -79,6 +112,185 @@ h5
 	font-size: 1.1rem
 	line-height: 1.5rem
 
+// Меню
+.mrg-side
+	margin-left: 2.5rem
+	margin-right: 2.5rem
+
+.mob-mrg-side
+	margin-left: 1rem
+	margin-right: 1rem
+	
+.menu
+	position: fixed
+	left: 0px
+	top: 0px
+	width: 100%
+	z-index: 100
+	padding: 1rem 0px
+	background-color: #fff
+	transition: 200ms linear
+	box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.05)
+	.logo
+		margin-right: 3rem
+		width: 3rem
+		img
+			height: 3.75rem
+			transition: 200ms linear
+	ul
+		text-decoration: none
+		li
+			margin-right: 1.5rem
+			
+			a
+				font-size: .95rem
+				text-decoration: none
+				// font-weight: $font-medium
+				color: $blue-text
+				padding: 0.5rem 0
+				&.active
+					border-bottom: 2px solid $orange
+				&:hover
+					color: $orange
+					transition: 200ms linear
+	.btn-wrap 
+		.btn-header
+			height: 2.75rem
+			background-color: $Orange
+			color: #fff
+			// font-weight: $font-medium
+			font-size: .95rem
+			margin-left: 2rem	
+			&:hover
+				color: #fff
+				background-color: $lightOrange
+				transition: 200ms linear
+				text-decoration: none	
+	.menu-contact
+		span
+			font-size: 1.15rem
+			// font-weight: $font-medium
+			color: $blue-text
+		p
+			color: $Orange
+			font-size: .8rem
+			text-align: right
+			margin: 0
+		@media screen and (max-width: 1340px)
+			display: none
+	@media screen and (max-width: 1192px)
+		display: none
+
+.menu.scrolled 
+	box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.05)
+	transition: 200ms linear
+	padding: 1rem 0px
+	.logo
+		img
+			height: 2.75rem
+			transition: 200ms linear
+
+.menu-color
+	// background-image: linear-gradient(to bottom right,#1c42aa 0%,#405da8 200%)
+	background-color: #fff
+	box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.05)
+	transition: 200ms linear
+	padding: 1rem 0px
+
+.menu-mob
+	// position: fixed
+	width: 100%
+	left: 0px
+	top: 0px
+	position: fixed
+	// padding: 1rem 0px
+	height: 60px
+	background-color: #fff
+	// background-image: linear-gradient(to bottom right,#15348b 0%,#405ea8 200%)
+	// background-image: linear-gradient(to bottom right,#1c42aa 0%,#405da8 200%)
+	box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.1)
+	display: none
+	z-index: 100
+	// img
+	// 	height: 1.75rem
+	#menu-link
+		display: none
+	.menu-btn
+		position: absolute
+		left: 20px
+		top: 14px
+	.menu-phone 
+		position: absolute
+		right: 20px
+		top: 16px
+		img
+			height: 28px
+	.menu-logo
+		height: 60px
+		width: 100%
+		a
+			color: $blue-text
+			font-weight: 700
+			font-size: 1.4rem
+
+	ul 
+		margin-top: -1px
+		padding-top: 1rem
+		padding-bottom: 1rem
+		// background-image: linear-gradient(to bottom right,#1c42aa 0%,#405da8 200%)
+		background-color: #fff
+		z-index: 99
+		li	
+			padding: 1rem 0
+			width: 100%
+			text-align: center
+			a
+				font-size: 1.2rem
+				text-decoration: none
+				// font-weight: $font-medium
+				color: $blue-text
+				padding: 0.5rem 0
+				&.active
+					border-bottom: 2px solid $orange
+				&:hover
+					color: $orange
+					transition: 200ms linear
+	@media screen and (max-width: 1192px)
+		display: block !important	
+
+// Крестик для моб. версии меню
+#toggle 
+	display: block
+	width: 25px
+	height: 23px
+	position: absolute
+	top: 15px
+	span
+		position: relative
+		display: block
+		&::after, &::before
+			content: ""
+			position: absolute
+			left: 0
+			top: -9px
+		&::after
+			top: 9px
+	span,
+	span::after,
+	span::before 
+		width: 100%
+		height: 3px
+		background-color: $blue-text
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 3px
+	&.on span 
+		background-color: transparent
+	&.on span:before 
+		transform: rotate(45deg) translate(5px, 5px)
+	&.on span:after
+		transform: rotate(-45deg) translate(7px, -8px)	
+
 // Блок "наши услуги"
 .services
 	background-color: $bcgcolor
@@ -103,29 +315,54 @@ h5
 		font-weight: 600
 		font-size: 1.1rem
 		line-height: 1.5rem
-
-.btn
-	width: 10.5rem
-	height: 2.5rem
-	background-color: $white
-	border-radius: 0.3rem
-	border: $lightgray
-	border-style: solid
-	border-width: 0.1rem
-	margin: 1.5rem 0 0 0
-	color: $lightgray
-	font-weight: 400
-	font-size: 1rem
-	line-height: 1.2rem
-	transition: 200ms linear
-	&:hover
-		background: $Orange
-		color: $white
-		border: none
-		transition: 200ms linear
-	&:active
-		background: $lightOrange
-		transition: 200ms linear
+.btn-wrap
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	align-items: flex-start
+	color: #fff
+	.btn
+		border-radius: 0.3rem
+		background-color: $orange
+		height: 3.5rem
+		padding: 0rem 2.5rem
+		display: flex
+		justify-content: center
+		align-items: center
+		outline: none
+		border: 0rem
+		// font-weight: $font-medium
+		color: $Orange
+		text-decoration: none
+		transition: all ease 0.20s
+		cursor: pointer
+		position: relative
+		overflow: hidden
+		&:hover
+			color: #fff
+			background-color: $lightOrange
+// .btn
+// 	width: 10.5rem
+// 	height: 2.5rem
+// 	background-color: $white
+// 	border-radius: 0.3rem
+// 	border: $lightgray
+// 	border-style: solid
+// 	border-width: 0.1rem
+// 	margin: 1.5rem 0 0 0
+// 	color: $lightgray
+// 	font-weight: 400
+// 	font-size: 1rem
+// 	line-height: 1.2rem
+// 	transition: 200ms linear
+// 	&:hover
+// 		background: $Orange
+// 		color: $white
+// 		border: none
+// 		transition: 200ms linear
+// 	&:active
+// 		background: $lightOrange
+// 		transition: 200ms linear
 .gym_img
 	max-width: 3.1rem
 	max-height: 3.1rem
@@ -208,6 +445,7 @@ h5
 		font-weight: 600
 		font-size: 2.1rem
 		margin: 0
+		text-color: $blue
 	.score
 		color: $Orange
 		font-weight: 700
