@@ -324,6 +324,15 @@ h5
 // Блок "наши услуги"
 .services
 	background-color: $bcgcolor
+	@media screen and (max-width: 960px)
+		span
+		font-size: 1rem
+	@media screen and (max-width: 720px)
+		font-size: 1rem !important
+
+
+			
+			
 	.item
 		background-color: $white
 		padding: 1.5rem 2rem
@@ -334,7 +343,7 @@ h5
 	.item:nth-child(2n+1)
     	margin-right: 1.5rem
 	.graph
-		padding-top: 1rem
+		padding: 1rem 0
 		font-weight: 400
 		font-size: 1rem
 		line-height: 1.4rem
@@ -345,6 +354,42 @@ h5
 		font-weight: 600
 		font-size: 1.1rem
 		line-height: 1.5rem
+		@media screen and (max-width: 720px)
+			font-size: 1rem
+		@media screen and (max-width: 540px)
+			font-size: 0.5rem
+.btn1
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 10.5rem
+	height: 3.5rem
+	background-color: $white
+	border-radius: 0.3rem
+	border: $lightgray
+	border-style: solid
+	border-width: 0.1rem
+	margin: 2.5rem 0 0 0
+	color: $lightgray
+	font-weight: 400
+	font-size: 1.2rem
+	line-height: 1.2rem
+	transition: 200ms linear
+	&:hover
+		background: $Orange
+		color: $white
+		border: none
+		transition: 200ms linear
+		text-decoration: none
+	&:active
+		background: $lightOrange
+		transition: 200ms linear
+		background-color: $white
+		padding: 1.5rem 2rem
+		border-radius: 5px
+		box-shadow: 0rem 0rem 0.4rem rgba(0, 0, 0, 0.1)
+		margin-bottom: 2rem
+
 .btn-wrap
 	display: flex
 	flex-wrap: wrap
@@ -371,28 +416,30 @@ h5
 		&:hover
 			color: #fff
 			background-color: $lightOrange
-// .btn
-// 	width: 10.5rem
-// 	height: 2.5rem
-// 	background-color: $white
-// 	border-radius: 0.3rem
-// 	border: $lightgray
-// 	border-style: solid
-// 	border-width: 0.1rem
-// 	margin: 1.5rem 0 0 0
-// 	color: $lightgray
-// 	font-weight: 400
-// 	font-size: 1rem
-// 	line-height: 1.2rem
-// 	transition: 200ms linear
-// 	&:hover
-// 		background: $Orange
-// 		color: $white
-// 		border: none
-// 		transition: 200ms linear
-// 	&:active
-// 		background: $lightOrange
-// 		transition: 200ms linear
+.btn1
+	// // width: 10.5rem
+	// height: 3.5rem
+	// // background-color: $white
+	// border-radius: 0.3rem
+	// border: $lightgray
+	// border-style: solid
+	// border-width: 0.1rem
+	// // margin: 2.5rem 0 0 0
+	// color: $lightgray
+	// font-weight: 400
+	// font-size: 1.2rem
+	// line-height: 1.2rem
+	// transition: 200ms linear
+	// &:hover
+	// 	background: $Orange
+	// 	color: $white
+	// 	border: none
+	// 	transition: 200ms linear
+	// 	text-decoration: none
+	// &:active
+	// 	background: $lightOrange
+	// 	transition: 200ms linear
+	
 .gym_img
 	max-width: 3.1rem
 	max-height: 3.1rem
@@ -404,18 +451,28 @@ h5
 	.wrapper_main
 	.block_one
 		width: 50%
+	.blue
+		margin: 0
 	.name_founder
 		color: $Orange
 		font-size: 1.5rem
 		margin: 2rem 0
 	.skills
-		// width: 28.4rem
-		// font-family: Open Sans
-		// font-style: normal
-		// font-weight: normal
-		// font-size: 1rem
-		// line-height: 1.5rem
-		// color: $black
+		width: 28.4rem
+		font-family: Open Sans
+		font-weight: normal
+		font-size: 1rem
+		line-height: 1.5rem
+		color: $black
+	.flex
+		flex-wrap: nowrap
+	.pdn
+		padding-left: 15px
+	.line_of_interest
+		margin: 2rem 0
+		font-weight: 600
+		font-size: 1.1rem
+		line-height: 1.5rem
 	.block_two
 		width: 50%
 		background: url(/img/Frame.svg) no-repeat
@@ -473,12 +530,16 @@ h5
 		margin-top: 1rem
 	.block_two
 		width: 50%
+		background: url(/img/quotes.svg) no-repeat
+		background-position: 30rem 3rem
+		
 	.graph
 		margin: 3rem 0
+		width: 29rem
 	.indent
 		margin: 0 3.3rem
 	p
-		margin: 0.1rem 0
+		margin: 0.3rem 0
 		font-weight: 400
 		font-size: 1rem
 		// line-height: 1.5rem
@@ -488,11 +549,13 @@ h5
 		font-weight: 700
 		font-size: 2.2rem
 		border-bottom: 0.1rem solid $Orange
+		padding-bottom: 0.3rem
 		
 		// line-height: 1.5rem
 	.sentence
 		font-weight: 400
 		font-size: 0.9rem
+		padding-top: 0.5rem
 		// line-height: 1.5rem
 
 
