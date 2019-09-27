@@ -345,37 +345,7 @@ h5
 			font-size: 1rem
 		@media screen and (max-width: 540px)
 			font-size: 0.5rem
-.btn1
-	display: flex
-	align-items: center
-	justify-content: center
-	width: 10.5rem
-	height: 3.5rem
-	background-color: $white
-	border-radius: 0.3rem
-	border: $lightgray
-	border-style: solid
-	border-width: 0.1rem
-	margin: 2.5rem 0 0 0
-	color: $lightgray
-	font-weight: 400
-	font-size: 1.2rem
-	line-height: 1.2rem
-	transition: 200ms linear
-	&:hover
-		background: $Orange
-		color: $white
-		border: none
-		transition: 200ms linear
-		text-decoration: none
-	&:active
-		background: $lightOrange
-		transition: 200ms linear
-		background-color: $white
-		padding: 1.5rem 2rem
-		border-radius: 5px
-		box-shadow: 0rem 0rem 0.4rem rgba(0, 0, 0, 0.1)
-		margin-bottom: 2rem
+
 
 .btn-wrap
 	display: flex
@@ -412,36 +382,13 @@ h5
 			&:hover
 				color: #fff
 				background-color: $Orange
+				border: 0
+			&:active
+				background: $lightOrange
+				transition: 200ms linear
 		&.btn-header
 			height: 2.75rem
 			margin-left: 2rem
-
-
-
-.btn1
-	// // width: 10.5rem
-	// height: 3.5rem
-	// // background-color: $white
-	// border-radius: 0.3rem
-	// border: $lightgray
-	// border-style: solid
-	// border-width: 0.1rem
-	// // margin: 2.5rem 0 0 0
-	// color: $lightgray
-	// font-weight: 400
-	// font-size: 1.2rem
-	// line-height: 1.2rem
-	// transition: 200ms linear
-	// &:hover
-	// 	background: $Orange
-	// 	color: $white
-	// 	border: none
-	// 	transition: 200ms linear
-	// 	text-decoration: none
-	// &:active
-	// 	background: $lightOrange
-	// 	transition: 200ms linear
-	
 .gym_img
 	max-width: 3.1rem
 	max-height: 3.1rem
@@ -458,7 +405,11 @@ h5
 	.name_founder
 		color: $Orange
 		font-size: 1.5rem
-		margin: 2rem 0
+		margin: 1rem 0
+		margin-bottom: 20px
+		font-weight: 600
+		font-size: 1.5rem
+		line-height: 2.2rem
 	.skills
 		width: 28.4rem
 		font-family: Open Sans
@@ -471,17 +422,26 @@ h5
 	.pdn
 		padding-left: 15px
 	.line_of_interest
-		margin: 2rem 0
+		margin: 1.6rem 0
+		margin-bottom: 1rem
 		font-weight: 600
 		font-size: 1.1rem
 		line-height: 1.5rem
 	.block_two
 		width: 50%
-		background: url(/img/Frame.svg) no-repeat
-		margin-top: -2%
-		padding-top: 5%
-	img
-		margin-left: -4%
+		position: relative
+		right: -85px
+	.doc
+		position: absolute
+		left: 0%
+		top: 1%
+		z-index: 1
+		width: 69%
+	.frm
+		width: 75%
+		top: -12%
+		position: absolute
+		left: 10%
 
 
 
@@ -520,31 +480,42 @@ h5
 .about_our_center
 	.block_one
 		width: 50%
-		background: url(/img/Frame3.svg) no-repeat
-		padding-top: 9rem
-		margin-top: -5rem
-	img
-		// max-width: 26.7rem
-		// max-height: 25.2rem
-		max-width: 26.7rem
-		max-height: 20.2rem
-		margin-left: 9rem
-		margin-top: 1rem
+		position: relative
+		height: 460px
+	.frm
+		width: 89%
+	.doc
+		position: absolute
+		left: 21%
+		top: 18%
+		max-width: 71%
 	.block_two
-		width: 50%
-		background: url(/img/quotes.svg) no-repeat
-		background-position: 30rem 3rem
-		
+		position: relative
+		margin-top: 5%
+		height: 373px
+		img
+			position: absolute
+			left: 103%
+			top: 10%
+		.blue
+			margin: 1rem 0
+			font-weight: 600
+			font-size: 2.1rem
+			line-height: 3.2rem
+			padding-bottom: 0.6rem
+					
 	.graph
-		margin: 3rem 0
+		// margin: 3rem 0
 		width: 29rem
+	.cpd
+		padding-top: 2.1rem
 	.indent
 		margin: 0 3.3rem
 	p
 		margin: 0.3rem 0
 		font-weight: 400
 		font-size: 1rem
-		// line-height: 1.5rem
+		line-height: 1.5rem
 		// width: 30.6rem
 	.score
 		color: $Orange
@@ -835,7 +806,7 @@ h5
 	.logo
 		height: 11.75rem
 	li
-		padding: 0.7rem 0
+		padding: 0.5rem 0
 	a
 		color: $blue-text
 		text-decoration: none
@@ -846,7 +817,7 @@ h5
 			-o-transition: .2s linear
 			transition: .2s linear
 	.ost
-		padding: 1.9rem 0
+		padding: 1.9rem 4rem
 	span
 		padding-left: 1rem
 		color: $blue-text
