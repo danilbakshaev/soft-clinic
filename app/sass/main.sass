@@ -401,11 +401,13 @@ h5
 	max-height: 3.1rem
 
 
-
 //блок "Основатель центра"
 .founder_center
 	.block_one
 		width: 50%
+		@media screen and ( max-width: 720px )
+			width: 100%
+			order: 2
 	.blue
 		margin: 0
 	.name_founder
@@ -421,10 +423,18 @@ h5
 		font-size: 1rem
 		line-height: 1.5rem
 		color: $black
-	.flex
-		flex-wrap: nowrap
 	.pdn
 		padding-left: 15px
+		@media screen and ( max-width: 1140px )
+			width: calc(100% - 1rem)
+		@media screen and ( max-width: 960px )
+			width: calc(100% - 1rem)
+		@media screen and ( max-width: 720px )
+			width: calc(100% - 2rem)
+
+		
+
+
 	.line_of_interest
 		margin: 1.6rem 0
 		margin-bottom: 1rem
@@ -434,14 +444,25 @@ h5
 	.block_two
 		width: 50%
 		position: relative
+		@media screen and ( max-width: 720px )
+			width: 100%
+			order: 1
 	.doc
 		z-index: 1
 		max-width: 23rem
+		@media screen and ( max-width: 720px )
+			padding-bottom: 2rem
 	.frm
 		top: -7%
 		left: 19%
 		max-width: 26rem
 		position: absolute
+		@media screen and ( max-width: 960px )
+			left: calc(50% - 12rem)
+			// width: calc(100% - 2rem)
+
+			
+
 
 
 
@@ -461,6 +482,15 @@ h5
 				margin-left: 0
 			&:last-child
 				margin-right: 0
+			@media screen and ( max-width: 720px )
+				width: 100%
+				margin: .75rem
+				&:first-child
+				margin-left: 0
+				&:last-child
+				margin-right: 0
+
+					
 		img
 			width: 4.3rem
 			height: 4.3rem
@@ -472,21 +502,36 @@ h5
 			font-weight: 600
 			font-size: 1.1rem
 			height: 3.25rem
+			@media screen and ( max-width: 960px )
+				width: 100%
+			@media screen and ( max-width: 720px )
+				margin: 0
+				
+			
+				
 		.cont
 			font-weight: 400
 			font-size: 1rem
 			line-height: 1.5rem
+			@media screen and ( max-width: 960px )
+				width: 100%
 
 //  блок "о нашем центре"
 .about_our_center
 	.block_one
 		width: 50%
 		position: relative
+		// @media screen and ( max-width: 720px )
+		// 	width: 100%
+			
 	.frm
 		position: absolute
 		left: 2%
 		max-width: 30rem
 		top: -15%
+		@media screen and ( max-width: 720px )
+			top: 0
+			left: 0
 	.doc
 		z-index: 1
 		max-width: 24rem
@@ -506,7 +551,7 @@ h5
 					
 	.graph
 		// margin: 3rem 0
-		width: 29rem
+		max-width: 29rem
 	.cpd
 		padding-top: 2.1rem
 	.indent
